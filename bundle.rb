@@ -16,16 +16,29 @@ END
   # Use Commands > Bundle Development > Insert Bundle Section > Menu
   # to easily add new sections
   bundle.menu 'NukeViet' do |menu|
-    menu.menu 'Templates' do |sub_menu|
+    menu.menu 'Db Query' do |sub_menu|
+        sub_menu.command 'Query Fetch Assoc'
+        sub_menu.command 'Query Fetch Num'
+        sub_menu.command 'Query Max Weight'
+    end
+    menu.menu 'Code PHP' do |sub_menu|
+        sub_menu.command 'Upload File'
+        sub_menu.command 'Upload UrlFile'
+        sub_menu.command 'Download File'
+        sub_menu.command 'Image Resize'
+    end
+    menu.menu 'Html Templates' do |sub_menu|
+        sub_menu.command 'Tpl Begin End'
+        sub_menu.command 'Tpl Form Submit'
+        sub_menu.command 'Tpl Table'
+    end
+    menu.menu 'File Templates' do |sub_menu|
         sub_menu.command 'File Head'
         sub_menu.command 'PHP Module'
         sub_menu.command 'PHP Module Admin'
         sub_menu.command 'PHP Language'
-    end
-    menu.menu 'Code PHP' do |sub_menu|
-        sub_menu.command 'Code PHP 1'
-        sub_menu.command 'Code PHP 2'
-        sub_menu.command 'Code PHP 3'
+        sub_menu.command 'Block Module.php'
+        sub_menu.command 'Block Module.ini'
     end
   end
 end
